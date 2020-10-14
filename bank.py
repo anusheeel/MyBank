@@ -12,10 +12,20 @@ weekday = x.strftime("%A")
 
 if char == journal:
     print(f"Journal for {year} - {month}{day_of_month} - {weekday}")
-    journal_input = input ("Enter the date")
-
+    journal_entry_1 = str(input("New things learned: "))
+    journal_entry_2 = input("how many minutes meditated? ")
+    journal_entry_3 = input("how many minutes workout? ")
+    journal_entry_4 = str(input("Anything distracting? "))
+    
 elif char == banking:
-    print("Expense")
+    print(f"Expense record for {year} - {month}{day_of_month} - {weekday}")
+    tod = ['morning', 'afternoon' , 'evening']
+    for i in tod:
+        banking_counter = int(input(f"How many times expense occured in {i}? "))
+        for j in range(banking_counter):  
+            banking_entry = input(f"Expense in the {i} _ {j}: ")
+            banking_entry_1 = str(input(f"Remarks for the {i} _ {j}: "))
+        
 
 else:
     print("Invalid Character")
